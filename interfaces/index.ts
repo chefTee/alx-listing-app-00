@@ -15,14 +15,33 @@ export interface ButtonProps {
   disabled?: boolean;
 }
 
-// Interface for Property listing (for future use)
-export interface Property {
-  id: string;
-  title: string;
-  description: string;
-  price: number;
-  image: string;
-  location: string;
+// // Interface for Property listing (for future use)
+// export interface Property {
+//   id: string;
+//   title: string;
+//   description: string;
+//   price: number;
+//   image: string;
+//   location: string;
+//   rating: number;
+//   amenities: string[];
+// }
+
+export interface PropertyProps {
+  name: string;
+  address: {
+    state: string;
+    city: string;
+    country: string;
+  };
   rating: number;
-  amenities: string[];
+  category: string[];
+  price: number;
+  offers: {
+    bed: string;
+    shower: string;
+    occupants: string;
+  };
+  image: string;
+  discount: string;
 }
